@@ -12,6 +12,7 @@ function Component() {
             <Deal />
             <TopProducts />
             <FeatureBanner />
+            
         </div>
     )
 }
