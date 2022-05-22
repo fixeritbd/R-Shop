@@ -377,3 +377,15 @@ img {
     width: 643px;
     text-transform: capitalize;
 }
+
+single-product.rs-panel-header {
+    color: #252525;
+    color: var(--rs-text-heading);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.single-product .activeColor{
+border: 2px solid #C4C4C4;
+}
