@@ -1,0 +1,100 @@
+.product-deatils-part {
+  padding: 100px 0px;
+}
+
+.product-deatils-part .product-img {
+  width: 100%;
+}
+
+.product-deatils-part .product-content h2 {
+  color: #403c3c;
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 700;
+  font-family: "Hind", sans-serif;
+  text-transform: uppercase;
+}
+
+.product-pricing {
+  display: flex;
+  align-items: center;
+}
+
+.product-pricing h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #05297f;
+}
+
+.product-pricing del {
+  font-size: 14px;
+  font-weight: 400;
+  color: #c4c4c4;
+  padding-left: 10px;
+}
+
+.product-pricing span {
+  margin-left: 150px;
+}
+
+.product-pricing p {
+  font-size: 18px;
+  color: #252525;
+}
+
+.product-pricing .pricing-left {
+  display: flex;
+  align-items: center;
+}
+
+.product-description p {
+  font-size: 16px;
+  color: #666666;
+  margin: 40px 0px;
+}
+
+.product-colorSize {
+  display: flex;
+  align-items: center;
+}
+
+.product-select {
+  display: flex;
+  align-items: center;
+}
+
+.product-select h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #252525;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+
+.product-size {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.product-size h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #252525;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+
+.product-size .size {
+  display: inline-block;
+  color: #b1b1b1;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "Hind", sans-serif;
+  height: 22px;
+  width: 22px;
+  border: 1px solid gray;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+}

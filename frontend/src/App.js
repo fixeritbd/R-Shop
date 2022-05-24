@@ -2,14 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import Home from "../src/pages/Home";
 import CartPage from "./pages/CartPage/CartPage";
+import ProductPage from "./pages/ProductPage";
 function App() {
   return (
     <>
-      <MainMenu />
       <BrowserRouter>
+        <MainMenu />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="cartpage" element={<CartPage />} />
+          <Route path="/cartpage" element={<CartPage />} />
+          <Route path="/productpage" element={<ProductPage />} />
         </Routes>
       </BrowserRouter>
     </>
