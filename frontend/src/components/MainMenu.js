@@ -4,6 +4,7 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 import { GiScales } from 'react-icons/gi';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 
 export default function MainMenu() {
@@ -41,10 +42,13 @@ export default function MainMenu() {
                             <FaRegUserCircle className='icon' />
                             <AiOutlineHeart className='icon' />
                             <GiScales className='icon' />
+                          <Link to='/cartpage'>
+                          
                             <span className='cart'>
                                 <AiOutlineShoppingCart className='icon' />
                                 <span className='round'>15</span>
                             </span>
+                          </Link>
                         </div>
                     </Nav>
                 </Navbar>

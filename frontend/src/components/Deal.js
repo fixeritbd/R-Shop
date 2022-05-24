@@ -17,7 +17,7 @@ export default function Deal() {
 
     }, [])
 
-
+console.log(deal);
     return (
         <Container className='container deal-part'>
             <Grid>

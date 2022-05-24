@@ -6,6 +6,8 @@ const logoData = require('./logoData')
 const delData = require('./delData')
 const productData = require('./productData')
 const featureBannerData = require('./featureBannerData')
+const cartItemData  = require('./cartItem')
+const recentViewed = require('./recentViewedData')
 
 
 
@@ -34,6 +36,15 @@ app.get('/banner', function (req, res) {
 app.get('/logo', function (req, res) {
     res.send(logoData)
 })
+
+app.get('/cartitem', function (req, res) {
+    res.send(cartItemData)
+})
+
+app.get('/recentviewed', function (req, res) {
+    res.send(recentViewed)
+})
+
 
 app.listen(8000, () => {
     console.log("server running on port 8000")
