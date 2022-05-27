@@ -37,9 +37,6 @@ function Product(props) {
             <AiOutlineShopping className="shopping-bag" />
           </span>
           <span className="price">${props.price}</span>
-          {/* {props.color.map(item => (
-                        <span className='productColor' style={{ background: `#${item}` }}></span>
-                    ))} */}
         </Panel>
       </Panel>
     </div>
