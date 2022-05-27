@@ -398,12 +398,14 @@ single-product.rs-panel-header {
 }
 .single-product .productSize {
     border: 2px solid #c4c4c4;
-    width: 22px;
+    width: 22px !important;
     height: 22px;
     background: #f1f1f1;
     color: #05297F;
     border-radius: 50%;
     text-align: center;
+    line-height: 18px;
+    display: inline-block;
 }
 
 .shopcollection {
