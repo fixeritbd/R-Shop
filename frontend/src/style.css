@@ -549,9 +549,17 @@ border: 2px solid #C4C4C4;
 }
 
 
-.rs-col{
+.buttom_img .rs-col{
 padding:0 !important;
+
 }
-.rs-col img{
+.buttom_img .rs-col img{
     width: 100%;
+}
+
+.logo_icon{
+    position: relative
+}
+.logo_icon img{
+    position: absolute;
 }
