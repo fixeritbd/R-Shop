@@ -3,6 +3,7 @@ import MainMenu from "./components/MainMenu";
 import Home from "../src/pages/Home";
 import CartPage from "./pages/CartPage/CartPage";
 import ProductPage from "./pages/ProductPage";
+import ShopCollection from "./pages/Shopcollection/ShopCollection";
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cartpage" element={<CartPage />} />
           <Route path="/productpage" element={<ProductPage />} />
+          <Route path="/shopcollection" element={<ShopCollection />} />
         </Routes>
       </BrowserRouter>
     </>

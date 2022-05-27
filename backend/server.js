@@ -6,7 +6,9 @@ const logoData = require('./logoData')
 const delData = require('./delData')
 const productData = require('./productData')
 const featureBannerData = require('./featureBannerData')
-
+const cartItemData  = require('./cartItem')
+const recentViewed = require('./recentViewedData')
+const gotoTralliData = require('./gotoTralliData')
 
 
 app.use(cors())
@@ -34,6 +36,20 @@ app.get('/banner', function (req, res) {
 app.get('/logo', function (req, res) {
     res.send(logoData)
 })
+
+app.get('/cartitem', function (req, res) {
+    res.send(cartItemData)
+})
+
+app.get('/recentviewed', function (req, res) {
+    res.send(recentViewed)
+})
+
+app.get('/gototralli', function (req, res) {
+    res.send(gotoTralliData)
+    console.log(gotoTralliData);
+})
+
 
 app.listen(8000, () => {
     console.log("server running on port 8000")

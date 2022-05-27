@@ -24,7 +24,7 @@ function Product(props) {
                 <span
                   className={activeColor == item ? "productColor activeColor" : "productColor"}
                   style={{ background: `#${item}` }}
-                ></span>
+                > </span>
               ))}
             </div>
             <div className="product-size">
@@ -37,9 +37,6 @@ function Product(props) {
             <AiOutlineShopping className="shopping-bag" />
           </span>
           <span className="price">${props.price}</span>
-          {/* {props.color.map(item => (
-                        <span className='productColor' style={{ background: `#${item}` }}></span>
-                    ))} */}
         </Panel>
       </Panel>
     </div>
@@ -47,3 +44,5 @@ function Product(props) {
 }
 
 export default Product;
+
+
