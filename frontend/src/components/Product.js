@@ -24,7 +24,7 @@ function Product(props) {
                 <span
                   className={activeColor == item ? "productColor activeColor" : "productColor"}
                   style={{ background: `#${item}` }}
-                ></span>
+                > </span>
               ))}
             </div>
             <div className="product-size">
@@ -44,3 +44,5 @@ function Product(props) {
 }
 
 export default Product;
+
+
