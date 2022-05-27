@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 import {
-  Button,
-  ButtonToolbar,
   Col,
   Form,
   Grid,
   Row,
-  Table,
-  Rate,
 } from "rsuite";
 import { Cell, Column, HeaderCell } from "rsuite-table";
-import troly from "../troly.png";
 import { ImCross } from "react-icons/im";
 import axios from "axios";
 import Product from "./Product";
@@ -26,15 +21,15 @@ const CartItems = () => {
     cartItemsData();
   }, []);
 
-  
+
   let [recentViewed, setRecentViewed] = useState([])
 
   useEffect(() => {
-      async function fetchProduct() {
-          let { data } = await axios.get("http://localhost:8000/recentviewed")
-          setRecentViewed(data)
-      }
-      fetchProduct()
+    async function fetchProduct() {
+      let { data } = await axios.get("http://localhost:8000/recentviewed")
+      setRecentViewed(data)
+    }
+    fetchProduct()
 
   }, [])
 
@@ -42,7 +37,7 @@ const CartItems = () => {
   return (
     <>
       <Grid fluid>
-        <Row className="show-grid">
+        <Row className="show-grid cartMain">
           <Col xs={16}>
             <table>
               <tr>
@@ -111,15 +106,15 @@ const CartItems = () => {
               <h3 style={{ padding: "30px 0" }}>Shipping</h3>
               <Form>
                 <Form.Group controlId="country">
-                  <Form.Control name="country" placeholder="Country"/>
+                  <Form.Control name="country" placeholder="Country" />
                 </Form.Group>
 
                 <Form.Group controlId="state">
-                  <Form.Control name="state" type="text" autoComplete="off"  placeholder="State/City"/>
+                  <Form.Control name="state" type="text" autoComplete="off" placeholder="State/City" />
                 </Form.Group>
 
                 <Form.Group controlId="zip">
-                  <Form.Control name="zip" type="text" placeholder="Zip"/>
+                  <Form.Control name="zip" type="text" placeholder="Zip" />
                 </Form.Group>
               </Form>
 
@@ -165,23 +160,23 @@ const CartItems = () => {
 
         <Row>
           <Col xs={24} className="recent_viewed">
-           <div className="recent_viewed_title">
-             <h1>RECENTLY VIEWED</h1>
-           </div>
-           <div className="recent_viewed_card">
+            <div className="recent_viewed_title">
+              <h1>RECENTLY VIEWED</h1>
+            </div>
+            <div className="recent_viewed_card">
 
-           <Grid>
+              <Grid>
                 <Row className="show-grid" gutter={30}>
-                    {recentViewed.map(item => (
-                        <Col xs={6}>
-                            <Product img={item.img} heading={item.name} rating={item.rating} brand={item.brand} color={item.color} size={item.sizes} price={item.price} />
-                        </Col>
-                    ))}
+                  {recentViewed.map(item => (
+                    <Col xs={6}>
+                      <Product img={item.img} heading={item.name} rating={item.rating} brand={item.brand} color={item.color} size={item.sizes} price={item.price} />
+                    </Col>
+                  ))}
 
 
                 </Row>
-            </Grid>
-           </div>
+              </Grid>
+            </div>
           </Col>
         </Row>
       </Grid>
