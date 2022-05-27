@@ -9,8 +9,14 @@ table {
 td,
 th {
   text-align: left;
-  padding: 30px;
+  padding:22px;
 }
+
+.cartMain h4 {
+  font-size: 17px;
+  line-height: 34px;
+}
+
 .item_des {
   margin: 5px;
 }

@@ -6,7 +6,8 @@ import { AiOutlineShopping } from "react-icons/ai";
 import Rating from "./Rating";
 
 function Product(props) {
-    const [activeColor, setActiveColor] = useState("red");
+    const [activeColor, setActiveColor] = useState("");
+    const [activeSize, setActiveSize] = useState("");
 
     return (
         <div className="single-product">
@@ -25,17 +26,13 @@ function Product(props) {
                             {props.color.map((item) => (
                                 <span
                                     className={
-                                        activeColor == item
-                                            ? "productColor activeColor"
-                                            : "productColor"
-                                    }
-                                    style={{ background: `#${item}` }}
-                                ></span>
-                            ))}
+                                        activeColor == item ? "productColor activeColor" : "productColor"}
+                                    style={{ background: `#${item}` }} onClick={() => setActiveColor(item)}></span>))}
                         </div>
                         <div className="product-size">
                             {props.size.map((item) => (
-                                <span>{item}</span>
+                                <span className={
+                                    activeSize == item ? 'productSize' : ''} onClick={() => setActiveSize(item)}>{item}</span>
                             ))}
                         </div>
                     </div>

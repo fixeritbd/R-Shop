@@ -317,15 +317,22 @@ img {
     background: red;
     margin-right: 10px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-.product-size span {
+.product-size span{
+    margin-left: 11px;
+    cursor: pointer;
+}
+
+.productSize span {
     display: inline-block;
     color: #b1b1b1;
     font-weight: 300;
     font-size: 14px;
     font-family: "Hind", sans-serif;
     margin-left: 11px;
+
 }
 
 .cart-product {
@@ -386,164 +393,171 @@ single-product.rs-panel-header {
     line-height: 1.25;
 }
 
-.single-product .activeColor{
-border: 2px solid #C4C4C4;
+.single-product .activeColor {
+    border: 3px solid #c4c4c4;
 }
-.shopcollection{
+.single-product .productSize {
+    border: 2px solid #c4c4c4;
+    width: 22px;
+    height: 22px;
+    background: #f1f1f1;
+    color: #05297F;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.shopcollection {
     background: url(../public/assets/images/shopcollection-bg.png) no-repeat center / cover;
     padding: 180px 0;
     /* padding-bottom: 230px; */
 }
-.shopcollection .shop-bannerText{
+.shopcollection .shop-bannerText {
     text-align: center;
 }
-.shopcollection .shop-bannerText h1{
+.shopcollection .shop-bannerText h1 {
     font-size: 72px;
     color: #fff;
     font-weight: 700;
 }
-.shopcollection .shop-bannerText h5{
+.shopcollection .shop-bannerText h5 {
     font-size: 16px;
     color: #fff;
     font-weight: 500;
     margin-top: 30px;
 }
-.detail{
-    background: #EEF2F5;
+.detail {
+    background: #eef2f5;
     padding: 30px;
 }
-.detail p{
+.detail p {
     font-size: 14px;
     color: #252525;
 }
-.top{
+.top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.top .clear-btn{
+.top .clear-btn {
     background: transparent;
     border: none;
     font-size: 14px;
     color: #05297f;
 }
-.top .clear-btn:hover{
+.top .clear-btn:hover {
     border: none;
     color: #05297f;
     background: transparent;
 }
-.top .rs-btn{
+.top .rs-btn {
     width: 48%;
     padding: 8px 15px !important;
     margin-top: 6px;
 }
-.category{
+.category {
     margin-top: 30px;
     padding: 20px;
 }
-.det h4{
+.det h4 {
     font-size: 18px;
     color: #252525;
     text-transform: uppercase;
 }
-.category ul>li{
+.category ul > li {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     line-height: 22px;
     padding: 5px;
 }
-.range-slider{
+.range-slider {
     padding: 20px;
 }
-.range-slider h6{
+.range-slider h6 {
     font-size: 14px;
     color: #252525;
     font-weight: 300;
     margin-top: 20px;
 }
-.rs-slider-progress-bar{
+.rs-slider-progress-bar {
     background-color: #05297f;
 }
-.rs-slider-handle:before{
+.rs-slider-handle:before {
     background: #05297f;
     border: #05297f;
 }
-.det{
+.det {
     padding: 20px;
 }
-.color ul li{
-   display: flex;
-   padding: 5px 0;
+.color ul li {
+    display: flex;
+    padding: 5px 0;
 }
-.color ul li span{
+.color ul li span {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background: #622060;
     margin-top: 2px;
- }
- .color ul li p{
-     font-size: 14px;
-     color: #252525;
-     margin-left: 10px;
- }
- .size .sizes ul{
-     display: flex;
-     margin-top: 15px;
- }
- .size .sizes ul li{
-     font-size: 16px;
-     color: #252525;
-     font-weight: 500;
-     text-align: center;
-     border: 1px solid #C4C4C4;
-     border-radius: 20px;
-     padding: 5px 10px;
-     margin-right: 15px;
-     transition: .4s;
-     cursor: pointer;
- }
- .size .sizes ul li:hover{
-     color: #fff;
-     background: #fc5a6a;
-     border: 1px solid #fc5a6a;
- }
- .brands .brand-name ul li{
-     font-size: 18px;
-     color: #252525;
-     font-weight: 400;
-     line-height: 18px;
-     margin-top: 10px;
- }
- 
+}
+.color ul li p {
+    font-size: 14px;
+    color: #252525;
+    margin-left: 10px;
+}
+.size .sizes ul {
+    display: flex;
+    margin-top: 15px;
+}
+.size .sizes ul li {
+    font-size: 16px;
+    color: #252525;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid #c4c4c4;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 15px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.size .sizes ul li:hover {
+    color: #fff;
+    background: #fc5a6a;
+    border: 1px solid #fc5a6a;
+}
+.brands .brand-name ul li {
+    font-size: 18px;
+    color: #252525;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 10px;
+}
 
+/* slider */
 
- /* slider */
+.slick-slide {
+    width: 250px !important;
+    background: red;
+}
 
- .slick-slide{
-     width: 250px !important;
-     background: red;
+.text {
+    padding: 50px 0;
+}
 
- }  
-
- .text{
-     padding: 50px 0;
- }
-
- .text h6{
-     font-size: 18px;
-     color: #444;
-     font-weight: 700;
-     text-transform: uppercase;
- }
- .text p{
+.text h6 {
+    font-size: 18px;
+    color: #444;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.text p {
     font-size: 16px;
     color: #777;
     font-weight: 400;
     line-height: 26px;
     margin-top: 20px;
 }
-.insta-part img{
+.insta-part img {
     width: 100%;
 }
