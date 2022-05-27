@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Button, Grid, Row, Col } from "rsuite";
 import CartItems from "../../components/CartItems";
+import GotoTrali from "../../components/GotoTrali";
 
 import "./CartPage.css";
 
@@ -14,6 +15,7 @@ const CartPage = () => {
         </div>
         <CartItems/>
       </Container>
+      <GotoTrali/>
     </>
   );
 };

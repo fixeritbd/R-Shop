@@ -547,3 +547,11 @@ border: 2px solid #C4C4C4;
 .insta-part img{
     width: 100%;
 }
+
+
+.rs-col{
+padding:0 !important;
+}
+.rs-col img{
+    width: 100%;
+}

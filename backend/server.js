@@ -8,7 +8,7 @@ const productData = require('./productData')
 const featureBannerData = require('./featureBannerData')
 const cartItemData  = require('./cartItem')
 const recentViewed = require('./recentViewedData')
-
+const gotoTralliData = require('./gotoTralliData')
 
 
 app.use(cors())
@@ -43,6 +43,11 @@ app.get('/cartitem', function (req, res) {
 
 app.get('/recentviewed', function (req, res) {
     res.send(recentViewed)
+})
+
+app.get('/gototralli', function (req, res) {
+    res.send(gotoTralliData)
+    console.log(gotoTralliData);
 })
 
 
