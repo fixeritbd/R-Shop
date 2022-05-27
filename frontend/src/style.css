@@ -561,3 +561,19 @@ single-product.rs-panel-header {
 .insta-part img {
     width: 100%;
 }
+
+
+.buttom_img .rs-col{
+padding:0 !important;
+
+}
+.buttom_img .rs-col img{
+    width: 100%;
+}
+
+.logo_icon{
+    position: relative
+}
+.logo_icon img{
+    position: absolute;
+}
