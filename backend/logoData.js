@@ -1,7 +1,5 @@
-let logoData =
-{
-    img: "assets/images/logo-2.jpg",
-}
+let logoData = {
+  img: "assets/images/logo-2.png",
+};
 
-
-module.exports = logoData
+module.exports = logoData;

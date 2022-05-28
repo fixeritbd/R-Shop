@@ -9,9 +9,9 @@ import img2 from "./bg-2.png";
 import img3 from "./bg-3.png";
 import "./productdeatils.css";
 import Rating from "../Rating";
-import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import { AiOutlineShopping } from "react-icons/ai";
 import ReletedProducts from "../../ReletedProducts";
+import Footer from "../Footer";
 
 const Productdeatils = (props) => {
   return (
@@ -167,6 +167,7 @@ const Productdeatils = (props) => {
           <ReletedProducts />
         </Container>
       </div>
+      <Footer />
     </>
   );
 };
