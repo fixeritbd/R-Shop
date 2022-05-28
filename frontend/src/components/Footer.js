@@ -19,82 +19,44 @@ const Footer = () => {
       <Container className="container">
         <Grid>
           <Row className="show-grid footer__top">
-            <Col md={6}>
+            <Col md={8}>
               <div>
-                <img src={logo} alt="R-Shop" />
+                <h2>R SHOP</h2>
               </div>
               <p>
-                Nunc gravida mi neque, id fringilla velit efficitur vel. Sed
-                mollis, arcu ac mollis eleifend, nunc
+                Nunc gravida mi neque, id fringilla velit efficitur vel. Sed mollis, arcu ac mollis eleifend,
+                nunc
               </p>
             </Col>
-            <Col md={6}>
+            <Col md={4}>
               <h3>Generals</h3>
 
-              <ul className="footer__links">
-                <li>Customer Support</li>
-                <li>Payments</li>
-                <li>API Support</li>
-                <li>Privacy Policy</li>
-              </ul>
+              <div className="footer__links">
+                <p>Customer Support</p>
+                <p>Payments</p>
+                <p>API Support</p>
+                <p>Privacy Policy</p>
+              </div>
             </Col>
-            <Col md={6}>
+            <Col md={4}>
               <h3>Supports</h3>
 
-              <ul className="footer__links">
-                <li>Terms and Conditions</li>
-                <li>Products Return</li>
-                <li>Wholesale Policy</li>
-                <li>Address Store</li>
-              </ul>
+              <div className="footer__links">
+                <p>Terms and Conditions</p>
+                <p>Products Return</p>
+                <p>Wholesale Policy</p>
+                <p>Address Store</p>
+              </div>
             </Col>
-            <Col md={6} className="footer__subscribe">
-              <h3>Subscribe Us</h3>
-              <p>Sed mollis, arcu ac mollis eleifend, nunc</p>
-              <form>
-                <input placeholder="subscribe" />
-                <button>Subscribe</button>
-              </form>
-            </Col>
-          </Row>
-
-          <Row className="show-grid footer__bottom">
-            <Col md={6}>
-              <h1>R-Shop</h1>
-              <p>
-                Nunc gravida mi neque, id fringilla velit efficitur vel. Sed
-                mollis, arcu ac mollis eleifend, nunc
-              </p>
-            </Col>
-            <Col md={6}>
-              <h3>Get In Touch</h3>
-
-              <ul>
-                <li>Delivery Information</li>
-                <li>Discount</li>
-                <li>100% Purchase Protection</li>
-                <li>Returns Centre</li>
-                <li>Your Account</li>
-              </ul>
-            </Col>
-            <Col md={6}>
-              <h3>Categories</h3>
-
-              <ul>
-                <li>Women</li>
-                <li>Men</li>
-                <li>Accessories</li>
-                <li>Sports Shoes</li>
-                <li>Clothes</li>
-              </ul>
-            </Col>
-            <Col md={6}>
-              <h3>Subscribe Us</h3>
-              <p>Sed mollis, arcu ac mollis eleifend, nunc</p>
-              <form>
-                <input placeholder="subscribe" />
-                <button>Subscribe</button>
-              </form>
+            <Col md={8}>
+              <div className="footer__subscribe">
+                <h3>Subscribe Us</h3>
+                <p>Sed mollis, arcu ac mollis eleifend, nunc</p>
+                <div className="subscirbe-submit">
+                  <input placeholder="subscribe" />
+                  <button>Submit</button>
+                </div>
+              </div>
             </Col>
           </Row>
         </Grid>
