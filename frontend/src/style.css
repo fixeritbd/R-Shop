@@ -320,13 +320,14 @@ img {
   cursor: pointer;
 }
 
-.productsize span{
+.productsize span {
   display: inline-block;
   font-family: 'Hind', sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #252525;
   margin-left: 11px;
+  line-height: 19px;
 }
 
 
