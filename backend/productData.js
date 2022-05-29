@@ -6,7 +6,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: false,
     },
     {
         name: "Formal Men Lowers",
@@ -15,7 +16,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: false,
     },
     {
         name: "Half Running Suit",
@@ -24,7 +26,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: true,
     },
     {
         name: "Half Fancy Lady Dress",
@@ -33,7 +36,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: true,
     },
     {
         name: "Flix Flox Jeans",
@@ -42,7 +46,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: true,
     },
     {
         name: "Fancy Salwar Suits",
@@ -51,7 +56,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: false,
     },
     {
         name: "Collot Full Dress",
@@ -60,7 +66,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: false,
     },
     {
         name: "Formal Fluex Kurti",
@@ -69,7 +76,8 @@ let productData = [
         brand: "zara",
         color: ["212529", "1473A9", "ff4c3b", "519D04"],
         sizes: ["xs", "s", "m"],
-        price: 119
+        price: 119,
+        featured: true,
     },
 ]
 
