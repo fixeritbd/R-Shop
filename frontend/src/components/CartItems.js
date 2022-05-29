@@ -96,7 +96,7 @@ const CartItems = () => {
                   type="text"
                   placeholder="Enter your Coupon here..."
                 />
-                <button className="coupon">Submit Coupon</button>
+                <button>Submit Coupon</button>
               </div>
             </div>
           </Col>
