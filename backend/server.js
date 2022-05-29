@@ -9,6 +9,7 @@ const featureBannerData = require('./featureBannerData')
 const cartItemData  = require('./cartItem')
 const recentViewed = require('./recentViewedData')
 const gotoTralliData = require('./gotoTralliData')
+const compare = require('./compare')
 
 
 app.use(cors())
@@ -47,10 +48,11 @@ app.get('/recentviewed', function (req, res) {
 
 app.get('/gototralli', function (req, res) {
     res.send(gotoTralliData)
-    console.log(gotoTralliData);
 })
 
-
+app.get('/compare', function (req, res) {
+    res.send(compare)
+})
 app.listen(8000, () => {
     console.log("server running on port 8000")
 })
