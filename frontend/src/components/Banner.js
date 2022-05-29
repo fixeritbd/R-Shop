@@ -20,7 +20,7 @@ export default function Banner() {
     }, [])
 
     return (
-        <div>
+        <div className='carosulMain'>
             <Carousel autoplay className="custom-slider">
 
 
@@ -29,11 +29,13 @@ export default function Banner() {
 
                     <div className="sliderItem">
                         <div className="bannerImg" style={{ backgroundImage: `url(${item.img})` }}>
-                            <Container className="container">
-                                <h4>{item.subheading}</h4>
-                                <h1>{item.heading}</h1>
-                                <Button className='hero-btn'>{item.button}</Button>
-                            </Container>
+                            <div className="container">
+                                <div className="banner_text">
+                                    <h4>{item.subheading}</h4>
+                                    <h1>{item.heading}</h1>
+                                    <Button className='hero-btn'>{item.button}</Button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
