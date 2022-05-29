@@ -533,6 +533,16 @@ single-product.rs-panel-header {
   border: 3px solid #c4c4c4;
 }
 .single-product .productSize {
+<<<<<<< HEAD
+    border: 2px solid #c4c4c4;
+    width: 22px !important;
+    height: 22px;
+    background: #f1f1f1;
+    color: #05297F;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+=======
   border: 2px solid #c4c4c4;
   width: 22px !important;
   height: 22px;
@@ -542,6 +552,7 @@ single-product.rs-panel-header {
   text-align: center;
   line-height: 18px;
   display: inline-block;
+>>>>>>> d205744d85edf34ee292c245332ddc4fa54bb7e7
 }
 
 .shopcollection {
