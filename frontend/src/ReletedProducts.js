@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Container, Grid, Row, Col } from "rsuite";
-import Product from "./Product";
 import axios from "axios";
+import Product from "./components/Product";
 
-export default function TopProducts() {
+export default function ReletedProducts() {
   let [product, setProduct] = useState([]);
 
   useEffect(() => {
@@ -18,35 +18,15 @@ export default function TopProducts() {
     <Container className="container top-products ">
       <Grid>
         <Row className="show-grid" gutter={30}>
-          <Col xs={12}>
-            <h2>Top Products</h2>
-          </Col>
-          <Col xs={12}>
-            <ul>
-              <li>
-                {" "}
-                <span></span> All
-              </li>
-              <li>
-                {" "}
-                <span></span> Boys Collection
-              </li>
-              <li>
-                {" "}
-                <span></span> Girl Collection
-              </li>
-              <li>
-                {" "}
-                <span></span> Shose Collection
-              </li>
-            </ul>
+          <Col style={{ textAlign: "center" }} xs={24}>
+            <h2>Releted Products</h2>
           </Col>
         </Row>
       </Grid>
       <Grid>
         <Row className="show-grid" gutter={30}>
           {product.map((item) => (
-            <Col xs={6}>
+            <Col xs={8}>
               <Product
                 img={item.img}
                 heading={item.name}
