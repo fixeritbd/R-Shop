@@ -14,7 +14,7 @@ import ReletedProducts from "../../ReletedProducts";
 import Footer from "../Footer";
 import GotoTrali from "../GotoTrali";
 
-const Productdeatils = (props) => {
+const ProductDeatils = (props) => {
   return (
     <>
       <div className="product-deatils-part">
@@ -174,4 +174,4 @@ const Productdeatils = (props) => {
   );
 };
 
-export default Productdeatils;
+export default ProductDeatils;
