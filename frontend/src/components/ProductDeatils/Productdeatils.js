@@ -12,6 +12,7 @@ import Rating from "../Rating";
 import { AiOutlineShopping } from "react-icons/ai";
 import ReletedProducts from "../../ReletedProducts";
 import Footer from "../Footer";
+import GotoTrali from "../GotoTrali";
 
 const Productdeatils = (props) => {
   return (
@@ -167,6 +168,7 @@ const Productdeatils = (props) => {
           <ReletedProducts />
         </Container>
       </div>
+      <GotoTrali />
       <Footer />
     </>
   );
