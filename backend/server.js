@@ -15,6 +15,11 @@ import {
 } from "./data/index.js";
 
 dotenv.config();
+
+const DB_URL = process.env.DB_URL;
+console.log(process.env);
+// const DB_URL = "mongodb://localhost:27017/rshop";
+
 const app = express();
 
 app.use(cors());
@@ -55,7 +60,7 @@ app.get("/recentviewed", function (req, res) {
 
 app.listen(8000, () => {
   console.log("server running on port 8000");
-  mongoose.connect(process.env.DB_URL, () => {
+  mongoose.connect(DB_URL, () => {
     console.log("DB Connected!");
   });
 });
