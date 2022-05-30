@@ -40,22 +40,6 @@ function Product(props) {
               ))}
             </div>
           </div>
-
-          {/* <div className="product-box">
-            <div className="product-color-box">
-              {props.color.map((item) => (
-                <span
-                  className={activeColor == item ? "productColor activeColor" : "productColor"}
-                  style={{ background: `#${item}` }}
-                > </span>
-              ))}
-            </div>
-            <div className="product-size">
-              {props.size.map((item) => (
-                <span>{item}</span>
-              ))}
-            </div>
-          </div> */}
           <span className="cart-product">
             <AiOutlineShopping className="shopping-bag" />
           </span>

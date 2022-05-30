@@ -349,6 +349,7 @@ img {
   color: #05297f;
   border-radius: 50%;
   text-align: center;
+  border: 1px solid #C4C4C4;
 }
 
 .cart-product {

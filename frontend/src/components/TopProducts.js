@@ -20,10 +20,10 @@ export default function TopProducts() {
     <Container className="container top-products ">
       <Grid>
         <Row className="show-grid" gutter={30}>
-          <Col xs={11}>
+          <Col md={11} xs={11}>
             <h2>Top Products</h2>
           </Col>
-          <Col xs={13}>
+          <Col md={13} xs={13}>
             <ul>
               <li>
                 <span></span> All
@@ -44,7 +44,7 @@ export default function TopProducts() {
       <Grid>
         <Row className="show-grid" gutter={30}>
           {product.map((item) => (
-            <Col xs={6}>
+            <Col md={6} xs={6}>
               <Product
                 img={item.img}
                 heading={item.name}
