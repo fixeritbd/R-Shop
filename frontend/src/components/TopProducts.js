@@ -18,25 +18,21 @@ export default function TopProducts() {
     <Container className="container top-products ">
       <Grid>
         <Row className="show-grid" gutter={30}>
-          <Col xs={12}>
+          <Col xs={11}>
             <h2>Top Products</h2>
           </Col>
-          <Col xs={12}>
+          <Col xs={13}>
             <ul>
               <li>
-                {" "}
                 <span></span> All
               </li>
               <li>
-                {" "}
                 <span></span> Boys Collection
               </li>
               <li>
-                {" "}
                 <span></span> Girl Collection
               </li>
               <li>
-                {" "}
                 <span></span> Shose Collection
               </li>
             </ul>

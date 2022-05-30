@@ -85,10 +85,6 @@ img {
   line-height: 20px;
 }
 
-/* .sliderItem {
-    background-color: transparent;
-} */
-
 .custom-slider {
   margin-top: 10px;
 }
@@ -101,7 +97,11 @@ img {
   background-size: cover;
 }
 
-.rs-carousel {
+.sliderItem .banner_text {
+  padding: 86px 0;
+}
+
+.carosulMain .rs-carousel {
   height: auto;
 }
 
@@ -115,7 +115,7 @@ img {
 }
 .bannerImg h1 {
   color: #403c3c;
-  width: 779px;
+  width: 841px;
   font-size: 70px;
   font-weight: 700;
   font-family: "Hind", sans-serif;
@@ -167,7 +167,7 @@ img {
 }
 .deal-part h2 {
   color: #05297f;
-  width: 240px;
+  width: 253px;
   font-size: 34px;
   line-height: 42px;
   font-weight: 700;
@@ -320,18 +320,35 @@ img {
   cursor: pointer;
 }
 
-.product-size span {
+.productsize span {
+  display: inline-block;
+  font-family: 'Hind', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #252525;
   margin-left: 11px;
-  cursor: pointer;
+  line-height: 19px;
 }
 
-.productSize span {
+
+.productbox{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.single-product .productSize{
+  cursor: pointer;
+}
+.single-product .productActiveSize{
   display: inline-block;
-  color: #b1b1b1;
-  font-weight: 300;
-  font-size: 14px;
-  font-family: "Hind", sans-serif;
-  margin-left: 11px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #C4C4C4;
+  background: #F1F1F1;
+  color: #05297F;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .cart-product {
@@ -398,7 +415,6 @@ single-product.rs-panel-header {
 .shopcollection {
   background: url(../public/assets/images/shopcollection-bg.png) no-repeat center / cover;
   padding: 180px 0;
-  /* padding-bottom: 230px; */
 }
 .shopcollection .shop-bannerText {
   text-align: center;
@@ -531,17 +547,6 @@ single-product.rs-panel-header {
 
 .single-product .activeColor {
   border: 3px solid #c4c4c4;
-}
-.single-product .productSize {
-  border: 2px solid #c4c4c4;
-  width: 22px !important;
-  height: 22px;
-  background: #f1f1f1;
-  color: #05297f;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 18px;
-  display: inline-block;
 }
 
 .shopcollection {
