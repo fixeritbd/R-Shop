@@ -36,18 +36,8 @@ export const handleGetProducts = async (req, res) => {
   }
 };
 export const handlePostProduct = async (req, res) => {
-  const {
-    brand,
-    category,
-    description,
-    discountedPrice,
-    imageUrls,
-    inStock,
-    price,
-    review,
-    slug,
-    title,
-  } = req.body;
+  const { brand, category, description, discountedPrice, imageUrls, inStock, price, review, slug, title } =
+    req.body;
   const productData = {
     brand,
     category,

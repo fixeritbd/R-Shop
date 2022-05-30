@@ -4,7 +4,7 @@ import Home from "../src/pages/Home";
 import CartPage from "./pages/CartPage/CartPage";
 import ShopCollection from "./pages/Shopcollection/ShopCollection";
 import ComparePage from "./pages/ComparePage/ComparePage";
-import ProductDeatils from "./components/ProductDeatils/ProductDeatils";
+import ProductPage from "./pages/ProductPage";
 function App() {
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cartpage" element={<CartPage />} />
-          <Route path="/productdeatils" element={<ProductDeatils />} />
+          <Route path="/productpage" element={<ProductPage />} />
           <Route path="/shopcollection" element={<ShopCollection />} />
           <Route path="/compare" element={<ComparePage />} />
         </Routes>

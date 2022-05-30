@@ -1,10 +1,14 @@
 import React from "react";
-import Productdeatils from "../components/ProductDeatils/Productdeatils";
+import Footer from "../components/Footer";
+import GotoTrali from "../components/GotoTrali";
+import ProductDeatils from "../components/ProductDeatils/ProductDeatils";
 
 const ProductPage = () => {
   return (
     <>
-      <Productdeatils />
+      <ProductDeatils />
+      <GotoTrali />
+      <Footer />
     </>
   );
 };

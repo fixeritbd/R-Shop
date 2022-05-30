@@ -23,17 +23,17 @@ export default function MainMenu() {
       <Container className="container">
         <Navbar className="menu">
           <Navbar.Brand href="#">
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </Navbar.Brand>
           <Nav className="menu-item">
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-            {/* <Link to="/compare">Compare</Link> */}
-            {/* <Nav.Item>Pages</Nav.Item>
-            <Nav.Item>Blog</Nav.Item>
-            <Nav.Item>Contacts</Nav.Item> */}
+            <Link to="/">
+              {" "}
+              <Nav.Item>Home</Nav.Item>{" "}
+            </Link>
+
+            <Nav.Item>Contacts</Nav.Item>
           </Nav>
           <Nav pullRight>
             <div className="nav-icon">

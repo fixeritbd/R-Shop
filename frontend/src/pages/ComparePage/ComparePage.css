@@ -10,7 +10,7 @@ th {
 }
 
 .compare_page {
-  padding: 50px 0px;
+  padding-top: 50px;
 }
 
 .only_difference {
@@ -42,4 +42,3 @@ th {
   margin-right: 5px;
   margin-top: 7px;
 }
-
