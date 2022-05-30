@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import Home from "../src/pages/Home";
 import CartPage from "./pages/CartPage/CartPage";
-import ProductPage from "./pages/ProductPage";
 import ShopCollection from "./pages/Shopcollection/ShopCollection";
 import ComparePage from "./pages/ComparePage/ComparePage";
+import ProductPage from "./pages/ProductPage";
 function App() {
   return (
     <>

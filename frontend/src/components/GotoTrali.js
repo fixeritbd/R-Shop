@@ -17,6 +17,9 @@ const GotoTrali = () => {
     imgData();
   }, []);
 
+  console.log(logo);
+  console.log(images);
+
   return (
     <>
       <div className="tralli_full">
@@ -28,7 +31,7 @@ const GotoTrali = () => {
               </Link>
             </div>
             {images.map((item, i) => (
-              <div className='buttom_img'>
+              <div className="buttom_img">
                 <Col xs={4}>
                   <img src={item.img} alt="" />
                 </Col>

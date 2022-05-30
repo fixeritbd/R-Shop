@@ -11,9 +11,8 @@ import "./productdeatils.css";
 import Rating from "../Rating";
 import { AiOutlineShopping } from "react-icons/ai";
 import ReletedProducts from "../../ReletedProducts";
-import Footer from "../Footer";
 
-const Productdeatils = (props) => {
+const ProductDeatils = (props) => {
   return (
     <>
       <div className="product-deatils-part">
@@ -167,9 +166,8 @@ const Productdeatils = (props) => {
           <ReletedProducts />
         </Container>
       </div>
-      <Footer />
     </>
   );
 };
 
-export default Productdeatils;
+export default ProductDeatils;
