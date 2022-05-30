@@ -43,6 +43,8 @@ img {
   display: inline-block;
   margin: 0 25px !important;
   transition: 0.4s;
+  text-decoration: none;
+  color: #000;
 }
 
 .menu-item a:hover {
@@ -322,7 +324,7 @@ img {
 
 .productsize span {
   display: inline-block;
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #252525;
@@ -330,23 +332,21 @@ img {
   line-height: 19px;
 }
 
-
-.productbox{
+.productbox {
   display: flex;
   justify-content: space-between;
-
 }
 
-.single-product .productSize{
+.single-product .productSize {
   cursor: pointer;
 }
-.single-product .productActiveSize{
+.single-product .productActiveSize {
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 1px solid #C4C4C4;
-  background: #F1F1F1;
-  color: #05297F;
+  border: 1px solid #c4c4c4;
+  background: #f1f1f1;
+  color: #05297f;
   border-radius: 50%;
   text-align: center;
 }
