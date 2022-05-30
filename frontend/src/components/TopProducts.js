@@ -14,6 +14,8 @@ export default function TopProducts() {
     fetchProduct();
   }, []);
 
+  console.log(product);
+
   return (
     <Container className="container top-products ">
       <Grid>

@@ -13,11 +13,13 @@ import {
   productData,
   recentViewedData,
 } from "./data/index.js";
+import compare from "./data/compare.js";
+import gotoTralliData from "./data/gotoTralliData.js";
 
 dotenv.config();
 
 const DB_URL = process.env.DB_URL;
-console.log(process.env);
+
 // const DB_URL = "mongodb://localhost:27017/rshop";
 
 const app = express();
@@ -26,7 +28,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.use("/products", productRouter);
+// app.use("/products", productRouter);
 
 app.get("/", function (req, res) {
   res.send("Hello World");
@@ -35,9 +37,9 @@ app.get("/", function (req, res) {
 app.get("/featurebanner", function (req, res) {
   res.send(featureBannerData);
 });
-// app.get("/products", function (req, res) {
-//   res.send(productData);
-// });
+app.get("/products", function (req, res) {
+  res.send(productData);
+});
 
 app.get("/deal", function (req, res) {
   res.send(delData);
@@ -52,6 +54,12 @@ app.get("/logo", function (req, res) {
 
 app.get("/cartitem", function (req, res) {
   res.send(cartItemData);
+});
+app.get("/compare", function (req, res) {
+  res.send(compare);
+});
+app.get("/gototralli", function (req, res) {
+  res.send(gotoTralliData);
 });
 
 app.get("/recentviewed", function (req, res) {
