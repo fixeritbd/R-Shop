@@ -1,63 +1,85 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import { Container, Grid, Row, Col } from "rsuite";
 import Product from "./Product";
 import axios from "axios";
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "FETCH-REQUEST":
+      return { ...state, loading: true };
+    case "FETCH-SUCCESS":
+      return { ...state, loading: false, products: action.payload };
+  }
+};
+
 export default function TopProducts() {
-  let [product, setProduct] = useState([]);
+  const [{ loading, products }, dispatch] = useReducer(reducer, { loading: false, products: [] });
 
   useEffect(() => {
     async function fetchProduct() {
-      let { data } = await axios.get("http://localhost:8000/products");
-      setProduct(data);
+      dispatch({ type: "FETCH-REQUEST" });
+      try {
+        let { data } = await axios.get("http://localhost:8000/products");
+        dispatch({ type: "FETCH-SUCCESS", payload: data });
+      } catch (error) {}
     }
     fetchProduct();
   }, []);
 
-  console.log(product);
+  console.log(loading);
 
   return (
-    <Container className="container top-products ">
-      <Grid>
-        <Row className="show-grid" gutter={30}>
-          <Col md={11} xs={11}>
-            <h2>Top Products</h2>
-          </Col>
-          <Col md={13} xs={13}>
-            <ul>
-              <li>
-                <span></span> All
-              </li>
-              <li>
-                <span></span> Boys Collection
-              </li>
-              <li>
-                <span></span> Girl Collection
-              </li>
-              <li>
-                <span></span> Shose Collection
-              </li>
-            </ul>
-          </Col>
-        </Row>
-      </Grid>
-      <Grid>
-        <Row className="show-grid" gutter={30}>
-          {product.map((item) => (
-            <Col md={6} xs={6}>
-              <Product
-                img={item.img}
-                heading={item.name}
-                rating={item.rating}
-                brand={item.brand}
-                color={item.color}
-                size={item.sizes}
-                price={item.price}
-              />
-            </Col>
-          ))}
-        </Row>
-      </Grid>
-    </Container>
+
+    <>
+      {loading ? (
+        <h1>Loading</h1>
+      ) : (
+        <>
+          <Container className="container top-products ">
+            <Grid>
+              <Row className="show-grid" gutter={30}>
+                <Col xs={11}>
+                  <h2>Top Products</h2>
+                </Col>
+                <Col xs={13}>
+                  <ul>
+                    <li>
+                      <span></span> All
+                    </li>
+                    <li>
+                      <span></span> Boys Collection
+                    </li>
+                    <li>
+                      <span></span> Girl Collection
+                    </li>
+                    <li>
+                      <span></span> Shose Collection
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+            </Grid>
+            <Grid>
+              <Row className="show-grid" gutter={30}>
+                {products.map((item) => (
+                  <Col xs={6}>
+                    <Product
+                      img={item.imageUrls}
+                      heading={item.title}
+                      review={item.review}
+                      brand={item.brand}
+                      color={item.color}
+                      size={item.sizes}
+                      price={item.price}
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Grid>
+          </Container>
+        </>
+      )}
+    </>
+
   );
 }

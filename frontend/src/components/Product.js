@@ -10,10 +10,10 @@ function Product(props) {
   return (
     <div className="single-product">
       <Panel bodyFill style={{ display: "inline-block", width: "100%" }}>
-        <img src={props.img} style={{ width: "100%" }} alt={props.name} />
+        <img src={props.img[0]} style={{ width: "100%" }} alt={props.name} />
 
         <div className="product-box">
-          <Rating rating={props.rating} />
+          <Rating rating={props.review.rating} />
           <div className="brand">
             <p className="productBrand"> {props.brand}</p>
           </div>

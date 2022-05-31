@@ -28,7 +28,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-// app.use("/products", productRouter);
+app.use("/products", productRouter);
 
 app.get("/", function (req, res) {
   res.send("Hello World");
@@ -37,9 +37,9 @@ app.get("/", function (req, res) {
 app.get("/featurebanner", function (req, res) {
   res.send(featureBannerData);
 });
-app.get("/products", function (req, res) {
-  res.send(productData);
-});
+// app.get("/products", function (req, res) {
+//   res.send(productData);
+// });
 
 app.get("/deal", function (req, res) {
   res.send(delData);
