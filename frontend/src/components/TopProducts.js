@@ -29,7 +29,6 @@ export default function TopProducts() {
   console.log(loading);
 
   return (
-
     <>
       {loading ? (
         <h1>Loading</h1>
@@ -80,6 +79,5 @@ export default function TopProducts() {
         </>
       )}
     </>
-
   );
 }

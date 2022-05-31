@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Col,
-  Form,
-  Grid,
-  Row,
-} from "rsuite";
+import { Col, Form, Grid, Row } from "rsuite";
 import { Cell, Column, HeaderCell } from "rsuite-table";
 import { ImCross } from "react-icons/im";
 import axios from "axios";
@@ -21,18 +16,15 @@ const CartItems = () => {
     cartItemsData();
   }, []);
 
-
-  let [recentViewed, setRecentViewed] = useState([])
+  let [recentViewed, setRecentViewed] = useState([]);
 
   useEffect(() => {
     async function fetchProduct() {
-      let { data } = await axios.get("http://localhost:8000/recentviewed")
-      setRecentViewed(data)
+      let { data } = await axios.get("http://localhost:8000/recentviewed");
+      setRecentViewed(data);
     }
-    fetchProduct()
-
-  }, [])
-
+    fetchProduct();
+  }, []);
 
   return (
     <>
@@ -91,11 +83,7 @@ const CartItems = () => {
             <div>
               <h3>Coupon Discount</h3>
               <div className="coupon_discount">
-                <input
-                  className="coupon"
-                  type="text"
-                  placeholder="Enter your Coupon here..."
-                />
+                <input className="coupon" type="text" placeholder="Enter your Coupon here..." />
                 <button>Submit Coupon</button>
               </div>
             </div>
@@ -164,16 +152,21 @@ const CartItems = () => {
               <h1>RECENTLY VIEWED</h1>
             </div>
             <div className="recent_viewed_card">
-
               <Grid>
                 <Row className="show-grid" gutter={30}>
-                  {recentViewed.map(item => (
+                  {recentViewed.map((item) => (
                     <Col xs={6}>
-                      <Product img={item.img} heading={item.name} rating={item.rating} brand={item.brand} color={item.color} size={item.sizes} price={item.price} />
+                      <Product
+                        img={item.img}
+                        heading={item.name}
+                        rating={item.rating}
+                        brand={item.brand}
+                        color={item.color}
+                        size={item.sizes}
+                        price={item.price}
+                      />
                     </Col>
                   ))}
-
-
                 </Row>
               </Grid>
             </div>
