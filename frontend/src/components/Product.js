@@ -10,10 +10,10 @@ function Product(props) {
   return (
     <div className="single-product">
       <Panel bodyFill style={{ display: "inline-block", width: "100%" }}>
-        <img src={props.img} style={{ width: "100%" }} alt={props.name} />
+        <img src={props.img[0]} style={{ width: "100%" }} alt={props.name} />
 
         <div className="product-box">
-          <Rating rating={props.rating} />
+          <Rating rating={props.review.rating} />
           <div className="brand">
             <p className="productBrand"> {props.brand}</p>
           </div>
@@ -40,22 +40,6 @@ function Product(props) {
               ))}
             </div>
           </div>
-
-          {/* <div className="product-box">
-            <div className="product-color-box">
-              {props.color.map((item) => (
-                <span
-                  className={activeColor == item ? "productColor activeColor" : "productColor"}
-                  style={{ background: `#${item}` }}
-                > </span>
-              ))}
-            </div>
-            <div className="product-size">
-              {props.size.map((item) => (
-                <span>{item}</span>
-              ))}
-            </div>
-          </div> */}
           <span className="cart-product">
             <AiOutlineShopping className="shopping-bag" />
           </span>
