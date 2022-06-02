@@ -61,7 +61,7 @@ const CartItems = () => {
                       <td>
                         <div className="item_counter">
                           <button
-                            className="button"
+                            
                             onClick={() => CartUpdate(item, item.quantity - 1)}
                             disabled={item.quantity == 1}
                           >

@@ -37,6 +37,14 @@ th {
   cursor: pointer;
   padding: 5px;
 }
+.item_counter button {
+  background: none;
+  padding: 5px;
+}
+.item_counter button:hover {
+  background: none;
+  font-weight: 900;
+}
 .cart_operations button {
   padding: 10px 30px;
   border: 1px solid #ccc;
@@ -45,24 +53,30 @@ th {
 }
 
 .coupon_discount {
-  /* width:100%; */
   margin: 30px 5px;
   display: flex;
   justify-content: flex-start;
   position: relative;
 }
+
 .coupon_discount input {
-  padding: 10px 145px;
+  padding: 10px 220px 10px 15px;
   border-radius: 50px;
+  text-align: left;
 }
 .coupon_discount button {
   position: absolute;
-  left: 400px;
+  left: 350px;
   border: 1 px solid #141414;
-  padding: 15px 20px;
+  padding: 13px 15px;
   border-radius: 50px;
-  bottom: -2px;
-  background: #efc3c3;
+  bottom: -1px;
+  background: #fc8787;
+  transition: all linear 0.4s;
+}
+.coupon_discount button:hover {
+  color: #fff;
+  background: #05297f;
 }
 
 button:hover {

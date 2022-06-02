@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../components/Footer";
 import GotoTrali from "../components/GotoTrali";
-import ProductDeatils from "../components/ProductDeatils/ProductDeatils";
+import Productdeatils from "../components/ProductDeatils/Productdeatils";
 
 const ProductPage = () => {
   return (
     <>
-      <ProductDeatils />
+      <Productdeatils />
       <GotoTrali />
       <Footer />
     </>
