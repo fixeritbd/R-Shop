@@ -32,8 +32,9 @@ function Product(props) {
           <Panel header={props.heading}>
             <div className="productbox">
               <div className="productcolorbox">
-                {props.color.map((item) => (
+                {props.color.map((item, color) => (
                   <span
+                    key={color}
                     className={activeColor == item ? "productColor activeColor" : "productColor"}
                     style={{ background: `#${item}` }}
                     onClick={() => setActivecolor(item)}
@@ -41,8 +42,9 @@ function Product(props) {
                 ))}
               </div>
               <div className="productsize">
-                {props.size.map((item) => (
+                {props.size.map((item, size) => (
                   <span
+                    key={size}
                     className={activeSize == item ? "productSize productActiveSize" : "productSize"}
                     onClick={() => setActivesize(item)}
                   >

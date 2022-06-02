@@ -94,8 +94,8 @@ const ProductDeatils = (props) => {
                     <div className="product-size">
                       <h5>choose choice</h5>
                       {product.sizes &&
-                        product.sizes.map((item) => (
-                          <span className="size" style={{ margin: " 0px 3px" }}>
+                        product.sizes.map((item, sizes) => (
+                          <span key={sizes} className="size" style={{ margin: " 0px 3px" }}>
                             {item}
                           </span>
                         ))}
@@ -103,9 +103,9 @@ const ProductDeatils = (props) => {
                   </div>
 
                   {state.cart.cartItems.map(
-                    (item) =>
+                    (item, detils) =>
                       item._id === product._id && (
-                        <div className="product-btn">
+                        <div key={detils} className="product-btn">
                           <div className="plusminus">
                             {" "}
                             <button

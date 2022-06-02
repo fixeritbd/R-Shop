@@ -44,8 +44,8 @@ const CartItems = () => {
                     <th>SUBTOTAL</th>
                     <th></th>
                   </tr>
-                  {state.cart.cartItems.map((item) => (
-                    <tr>
+                  {state.cart.cartItems.map((item, cartItems) => (
+                    <tr key={cartItems}>
                       <td style={{ display: "flex" }}>
                         {item.imageUrls && <img src={item.imageUrls[0]} style={{ width: "15%" }} alt="" />}
                         <div className="item_des">

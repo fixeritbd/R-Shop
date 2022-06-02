@@ -18,8 +18,8 @@ export default function Deal() {
     <Container className="container deal-part">
       <Grid>
         <Row className="show-grid" gutter={30}>
-          {deal.map((item, index) => (
-            <Col xs={12}>
+          {deal.map((item, index, del) => (
+            <Col key={del} xs={12}>
               <div className="dealImg" style={{ backgroundImage: `url(${item.img})` }}>
                 <h5>{item.subheading}</h5>
                 <h2>{item.heading}</h2>
