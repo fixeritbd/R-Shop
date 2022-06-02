@@ -5,10 +5,14 @@ import GotoTrali from "../../components/GotoTrali";
 import Footer from "../../components/Footer";
 
 import "./CartPage.css";
+import { Helmet } from "react-helmet-async";
 
 const CartPage = () => {
   return (
     <>
+      <Helmet>
+        <title>Cart Page</title>
+      </Helmet>
       <Container className="container cart_page_main">
         <div className="cart_page_title">
           <p className="pagination"> Home | Shop | Cart</p>

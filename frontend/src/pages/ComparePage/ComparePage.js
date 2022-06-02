@@ -7,6 +7,7 @@ import { ImCross } from "react-icons/im";
 import { AiOutlineShopping } from "react-icons/ai";
 import Rating from "../../components/Rating";
 import Footer from "../../components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const ComparePage = () => {
   const [compareitem, setCompareItem] = useState([]);
@@ -20,7 +21,9 @@ const ComparePage = () => {
 
   return (
     <>
-      {" "}
+      <Helmet>
+        <title>Compare</title>
+      </Helmet>{" "}
       <div className="compare_page">
         <Container className="container">
           <Grid style={{ marginBottom: "50px" }}>
@@ -44,8 +47,8 @@ const ComparePage = () => {
                     <th>PRICE</th>
                     <th></th>
                   </tr>
-                  {compareitem.map((item) => (
-                    <tr className="all_item">
+                  {compareitem.map((item, compare) => (
+                    <tr key={compare} className="all_item">
                       <td style={{ display: "flex" }}>
                         <div className="item_img" style={{ width: "100px" }}>
                           <img src={item.img} alt="" style={{ width: "100%" }} />

@@ -44,8 +44,8 @@ const CartItems = () => {
                     <th>SUBTOTAL</th>
                     <th></th>
                   </tr>
-                  {state.cart.cartItems.map((item) => (
-                    <tr>
+                  {state.cart.cartItems.map((item, cartItems) => (
+                    <tr key={cartItems}>
                       <td style={{ display: "flex" }}>
                         {item.imageUrls && <img src={item.imageUrls[0]} style={{ width: "15%" }} alt="" />}
                         <div className="item_des">
@@ -168,7 +168,22 @@ const CartItems = () => {
                 <div className="recent_viewed_title">
                   <h1>RECENTLY VIEWED</h1>
                 </div>
-                <div className="recent_viewed_card">
+                {state.cart.cartItems.map((item, releted) => (
+                  <Col key={releted} xs={8}>
+                    <Product
+                      img={item.imageUrls}
+                      heading={item.title}
+                      review={item.review}
+                      brand={item.brand}
+                      color={item.color}
+                      size={item.sizes}
+                      price={item.price}
+                      item={item}
+                      slug={item.slug}
+                    />
+                  </Col>
+                ))}
+                {/* <div className="recent_viewed_card">
                   <Grid>
                     <Row className="show-grid" gutter={30}>
                       {recentViewed.map((item) => (
@@ -186,7 +201,7 @@ const CartItems = () => {
                       ))}
                     </Row>
                   </Grid>
-                </div>
+                </div> */}
               </Col>
             </Row>
           </Grid>

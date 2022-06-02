@@ -25,8 +25,8 @@ export default function ReletedProducts() {
       </Grid>
       <Grid>
         <Row className="show-grid" gutter={30}>
-          {product.map((item) => (
-            <Col xs={8}>
+          {product.map((item, releted) => (
+            <Col key={releted} xs={8}>
               <Product
                 img={item.imageUrls}
                 heading={item.title}
