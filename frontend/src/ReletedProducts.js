@@ -35,6 +35,8 @@ export default function ReletedProducts() {
                 color={item.color}
                 size={item.sizes}
                 price={item.price}
+                item={item}
+                slug={item.slug}
               />
             </Col>
           ))}

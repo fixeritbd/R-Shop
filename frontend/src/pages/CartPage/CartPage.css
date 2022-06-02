@@ -1,16 +1,15 @@
 .cart_page_main {
-  padding: 150px 0;
+  padding: 50px 0;
 }
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
-.cartMain
 td,
 th {
   text-align: left;
-  padding:22px;
+  padding: 22px 5px;
 }
 
 .cartMain h4 {
@@ -20,6 +19,7 @@ th {
 
 .item_des {
   margin: 5px;
+  margin-left: 30px;
 }
 .item_counter {
   display: flex;
@@ -64,6 +64,7 @@ th {
   bottom: -2px;
   background: #efc3c3;
 }
+
 button:hover {
   background-color: #eb9292;
 }
@@ -87,17 +88,17 @@ button:hover {
 }
 .check_out {
   display: flex;
-  justify-content:center;
-  padding:25px;
+  justify-content: center;
+  padding: 25px;
 }
 
 .check_out button {
   padding: 10px 60px;
   border-radius: 50px;
-  background-color: #05297f;  
+  background-color: #05297f;
   color: #fff;
 }
 
-.recent_viewed_title{
-    padding-top:50px;
+.recent_viewed_title {
+  padding-top: 50px;
 }

@@ -17,9 +17,6 @@ const GotoTrali = () => {
     imgData();
   }, []);
 
-  console.log(logo);
-  console.log(images);
-
   return (
     <>
       <div className="tralli_full">

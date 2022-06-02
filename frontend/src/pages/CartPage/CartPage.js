@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Button, Grid, Row, Col } from "rsuite";
 import CartItems from "../../components/CartItems";
 import GotoTrali from "../../components/GotoTrali";
+import Footer from "../../components/Footer";
 
 import "./CartPage.css";
 
@@ -13,9 +14,10 @@ const CartPage = () => {
           <p className="pagination"> Home | Shop | Cart</p>
           <h1 className="title">Cart Page</h1>
         </div>
-        <CartItems/>
       </Container>
-      <GotoTrali/>
+      <CartItems />
+      <GotoTrali />
+      <Footer />
     </>
   );
 };

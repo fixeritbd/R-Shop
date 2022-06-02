@@ -1,9 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "rsuite/dist/rsuite.min.css";
-import './style.css'
-import App from './App';
+import "./style.css";
+import App from "./App";
+import { StoreProvier } from "./Store";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode><App /></React.StrictMode>);
+  <React.StrictMode>
+    <StoreProvier>
+      <App />
+    </StoreProvier>
+  </React.StrictMode>
+);
