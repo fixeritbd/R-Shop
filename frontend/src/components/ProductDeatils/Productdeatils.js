@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useReducer, useEffect } from "react";
 import { Col, Container, Grid, Row } from "rsuite";
 import troli1 from "./troli-1.png";
 import troli2 from "./troli-2.png";
@@ -11,8 +11,48 @@ import "./productdeatils.css";
 import Rating from "../Rating";
 import { AiOutlineShopping } from "react-icons/ai";
 import ReletedProducts from "../../ReletedProducts";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
+import { Store } from "../../Store";
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "FETCH-REQUEST":
+      return { ...state, loading: true };
+    case "FETCH-SUCCESS":
+      return { ...state, loading: false, product: action.payload };
+  }
+};
 
 const ProductDeatils = (props) => {
+  const navigate = useNavigate();
+  const params = useParams();
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+
+  const [{ loading, product }, dispatch] = useReducer(reducer, { loading: false, product: {} });
+  useEffect(() => {
+    async function fetchProduct() {
+      dispatch({ type: "FETCH-REQUEST" });
+      try {
+        let { data } = await axios.get(`http://localhost:8000/products/${params.slug}`);
+        dispatch({ type: "FETCH-SUCCESS", payload: data });
+      } catch (error) {}
+    }
+    fetchProduct();
+  }, [params.slug]);
+
+  const CartUpdate = (product, quantity) => {
+    ctxDispatch({ type: "CART-ADD-ITEM", payload: { ...product, quantity } });
+  };
+
+  const CartAdd = (product) => {
+    ctxDispatch({ type: "CART-ADD-ITEM", payload: { ...product } });
+    navigate("/cartpage");
+  };
+
+  console.log(product);
+
+  if (loading) return <h1>Loading</h1>;
   return (
     <>
       <div className="product-deatils-part">
@@ -20,14 +60,14 @@ const ProductDeatils = (props) => {
           <Grid>
             <Row className="show-grid" gutter={30}>
               <Col xs={12}>
-                <img src={troli1} className="product-img" alt="" />
+                {product.imageUrls && <img src={product.imageUrls[0]} className="product-img" alt="" />}
               </Col>
               <Col xs={12}>
                 <div className="product-content">
-                  <h2>Quilted gilet with hood</h2>
+                  <h2>{product?.title}</h2>
                   <div className="product-pricing">
                     <div className="pricing-left">
-                      <h4>$145</h4>
+                      <h4>${product?.price}</h4>
                       <del>$249</del>
                       <span className="productColor" style={{ background: "green" }}></span>
                       <p>In Stock</p>
@@ -35,17 +75,13 @@ const ProductDeatils = (props) => {
                   </div>
                   <div className="product-review">
                     {" "}
-                    <Rating rating={props.rating} />
+                    {product.review && <Rating rating={product.review.rating} />}
                     <h5>6 Review</h5> <h5>|</h5> <h5>Add Review</h5>
                   </div>
                   <div className="product-review"></div>
                   <div className="product-description">
                     {" "}
-                    <p>
-                      Sed pretium turpis id orci molestie, vitae placerat ligula vulputate. Duis volutpat ante
-                      sed laoreet tempus. Vivamus diam purus, vehicula ac tortor ut, dictum vestibulum nisi.
-                      Nulla condimentum felis quis augue viverra, et tempor arcu dapibus.
-                    </p>{" "}
+                    <p>{product?.description?.full}</p>{" "}
                   </div>
                   <div className="product-colorSize">
                     <div className="product-select">
@@ -57,31 +93,46 @@ const ProductDeatils = (props) => {
                     </div>
                     <div className="product-size">
                       <h5>choose choice</h5>
-                      <span className="size" style={{ margin: " 0px 3px" }}>
-                        XS
-                      </span>
-                      <span className="size" style={{ margin: " 0px 3px" }}>
-                        S
-                      </span>
-                      <span className="size" style={{ margin: "0px 3px" }}>
-                        M
-                      </span>
+                      {product.sizes &&
+                        product.sizes.map((item) => (
+                          <span className="size" style={{ margin: " 0px 3px" }}>
+                            {item}
+                          </span>
+                        ))}
                     </div>
                   </div>
-                  <div className="product-btn">
-                    <div className="plusminus">
-                      {" "}
-                      <button>-</button> <h5>2</h5> <button>+</button>{" "}
-                    </div>
-                    <button className="btn">
-                      {" "}
-                      <h5>
-                        <AiOutlineShopping style={{ fontSize: "28px" }} />
-                      </h5>
-                      <h5>Add to cart</h5>
-                    </button>
-                    <h3>$290</h3>
-                  </div>
+
+                  {state.cart.cartItems.map(
+                    (item) =>
+                      item._id === product._id && (
+                        <div className="product-btn">
+                          <div className="plusminus">
+                            {" "}
+                            <button
+                              onClick={() => CartUpdate(item, item.quantity - 1)}
+                              disabled={item.quantity === 1}
+                            >
+                              -
+                            </button>{" "}
+                            <h5>{item.quantity}</h5>{" "}
+                            <button
+                              onClick={() => CartUpdate(item, item.quantity + 1)}
+                              disabled={item.quantity === item.inStock}
+                            >
+                              +
+                            </button>{" "}
+                          </div>
+                          <button onClick={() => CartAdd(item)} className="btn">
+                            {" "}
+                            <h5>
+                              <AiOutlineShopping style={{ fontSize: "28px" }} />
+                            </h5>
+                            <h5>Add to cart</h5>
+                          </button>
+                          <h3>$290</h3>
+                        </div>
+                      )
+                  )}
                 </div>
               </Col>
             </Row>

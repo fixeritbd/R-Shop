@@ -28,13 +28,15 @@ export default function ReletedProducts() {
           {product.map((item) => (
             <Col xs={8}>
               <Product
-                img={item.img}
-                heading={item.name}
-                rating={item.rating}
+                img={item.imageUrls}
+                heading={item.title}
+                review={item.review}
                 brand={item.brand}
                 color={item.color}
                 size={item.sizes}
                 price={item.price}
+                item={item}
+                slug={item.slug}
               />
             </Col>
           ))}

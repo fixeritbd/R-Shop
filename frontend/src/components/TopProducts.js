@@ -1,7 +1,9 @@
-import React, { useEffect, useState, useReducer } from "react";
+import React, { useEffect, useState, useReducer, useContext } from "react";
 import { Container, Grid, Row, Col } from "rsuite";
 import Product from "./Product";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { Store } from "../Store";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -14,6 +16,7 @@ const reducer = (state, action) => {
 
 export default function TopProducts() {
   const [{ loading, products }, dispatch] = useReducer(reducer, { loading: false, products: [] });
+  // const { state, dispatch: ctxDispatch } = useContext(Store);
 
   useEffect(() => {
     async function fetchProduct() {
@@ -26,10 +29,7 @@ export default function TopProducts() {
     fetchProduct();
   }, []);
 
-  console.log(loading);
-
   return (
-
     <>
       {loading ? (
         <h1>Loading</h1>
@@ -71,6 +71,8 @@ export default function TopProducts() {
                       color={item.color}
                       size={item.sizes}
                       price={item.price}
+                      item={item}
+                      slug={item.slug}
                     />
                   </Col>
                 ))}
@@ -80,6 +82,5 @@ export default function TopProducts() {
         </>
       )}
     </>
-
   );
 }
